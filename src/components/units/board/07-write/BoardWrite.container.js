@@ -1,19 +1,10 @@
-import { useMutation, gql } from '@apollo/client'
+import { useMutation } from '@apollo/client'
 import { useState } from 'react'
+import BoardWriteUI from './BoardWrite.presenter'
+import { 나의그래프큐엘셋팅 } from './BoardWrite.queries'
 
-const 나의그래프큐엘셋팅 = gql`
-    mutation createBoard($writer : String, $title: String, $contents: String){
-
-        createBoard(writer: $writer, title: $title, contents: $contents){
-            _id
-            number
-            message
-        }
-}
-`
-
-
-export default function GraphqlMutationPage(){
+export default function BoardWrite (){
+    const [isActive, setIsActive] = useState(false)
     const [writer, setWriter] = useState()
     const [title, setTitle] = useState()
     const [contents, setContents] = useState()
@@ -41,14 +32,13 @@ export default function GraphqlMutationPage(){
         setContents(event.target.value)
     }
 
-    return (
-        <div>
-            작성자: <input type='text' onChange={onChangeWrite} />
-            제목: <input type='text' onChange={onChangeTitle} />
-            내용: <input type='text' onChange={onChangeContents} />
-            <button onClick={onClickSubmit}>HRAPHQL-API 요청하기</button>
-        </div>
+    return(
+        <BoardWriteUI 
+            onClickSubmit={onClickSubmit}
+            onChangeWrite={onChangeWrite}
+            onChangeTitle={onChangeTitle}
+            onChangeContents={onChangeContents}
+            isActive={isActive}
+        />
     )
-    
-
 }
