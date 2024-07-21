@@ -16,7 +16,12 @@ export default function RestGetPage(){
             const result = await axios.get("https://koreanjson.com/posts/1") 
             console.log(result) // 제대로된 결과 => { title: "..."}
             console.log(result.data.title) // 제대로된 결과 => { title: "..."}
+
         }
+
+    // - Pending(대기): 비동기 처리 로직이 아직 완료되지 않은 상태
+    // - Fulfilled(이행): 비동기 처리가 완료되어 프로미스가 결과 값을 반환해 준 상태
+    // - Rejected(실패): 비동기 처리가 실패하거나 오류가 발생한 상태    
     return(
         <div>
             <button onClick={onClickAsync}>REST-API(비동기) 요청하기</button>
