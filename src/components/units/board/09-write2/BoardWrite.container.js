@@ -50,7 +50,7 @@ export default function BoardWrite (props){
     const onChangeContents = (event) => {
         setContents(event.target.value)
     }
-
+    
     return(
         <BoardWriteUI 
             onClickSubmit={onClickSubmit}
