@@ -1,6 +1,16 @@
+import { ChangeEvent, MouseEvent } from "react"
 import { RedInput, BlueInput } from "./BoardWrite.styles"
+interface IBoardWriteUIProps{
+    onClickSubmit : (event:MouseEvent<HTMLButtonElement>) => void
+    onClickUpdate : (event:MouseEvent<HTMLButtonElement>) => void
+    onChangeWrite : (event:ChangeEvent<HTMLInputElement>) => void
+    onChangeTitle : (event:ChangeEvent<HTMLInputElement>) => void
+    onChangeContents : (event:ChangeEvent<HTMLInputElement>) => void
+    isEdit : boolean
+    data? : any
+}
 
-export default function BoardWriteUI (props){
+export default function BoardWriteUI (props: IBoardWriteUIProps){
 
     return (
         <div>
