@@ -9,13 +9,13 @@ export interface Iprofile{
 // 1. Partial 타입  ? 다들어감 
 type aaa = Partial<Iprofile>
 
-// 2. Required 타입
+// 2. Required 타입 => 모두 포함 시킴 
 type bbb = Required<Iprofile>
 
-// 3. Pick 타입 
+// 3. Pick 타입  => 선택자만 음..이것은 구조분해인가 ? 
 type ccc = Pick<Iprofile, "name" | "age">
 
-// 4. Omit 타입 
+// 4. Omit 타입  =>
 type ddd = Omit<Iprofile, "school">
 
 // 5. Record 타입 
