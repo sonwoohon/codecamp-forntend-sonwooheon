@@ -3,13 +3,9 @@ import { useState, ChangeEvent} from 'react'
 import BoardWriteUI from './BoardWrite.presenter'
 import { 나의그래프큐엘셋팅, UPDATE_BOARD } from './BoardWrite.queries'
 import { useRouter } from 'next/router'
+import { IBoardWriteProps, IMyvariabels } from './BoradWrite.Types'
 
 
-interface IBoardWriteProps{
-    isEdit:boolean
-    data?: any
-
-}
 
 export default function BoardWrite (props : IBoardWriteProps){
     const router = useRouter()
@@ -33,12 +29,6 @@ export default function BoardWrite (props : IBoardWriteProps){
         router.push( `/section10/10-02-typescript-boards/${result.data.createBoard.number}`)
     }
     const onClickUpdate = async () => {
-        interface IMyvariabels{
-            number : number
-            writer?: string
-            title?: string
-            contents?: string
-        }
         const myvariabels:IMyvariabels = {
             number : Number(router.query.number)
         }
