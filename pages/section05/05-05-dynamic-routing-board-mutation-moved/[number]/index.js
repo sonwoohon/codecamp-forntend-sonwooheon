@@ -26,4 +26,4 @@ export default function StaticRoutingMovedPage(){
             <div>내용 : {data?.fetchBoard?.contents}</div>
         </div>
     )
-}
+} 

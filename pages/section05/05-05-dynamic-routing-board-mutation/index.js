@@ -38,6 +38,7 @@ export default function GraphqlMutationPage(){
     }
 
 
+    
     // 한 줄일때는 괄호() 필요 없음
     return <button onClick={onClickSubmit}>HRAPHQL-API 요청하기</button>
     
