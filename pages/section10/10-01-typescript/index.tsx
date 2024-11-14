@@ -18,14 +18,14 @@ export default function TypescriptPage(){
     ddd = "철수"
 
     // 불린타입
-    let eee: boolean = true
+    let eee:boolean = true
     eee = false
-    eee = "false" //true
+    eee = "false" // true
     
     // 배열타입
-    let fff : number[] = [1,2,3,4,5,"안녕하세요"]
-    let ggg : string[] = ["철수","영희","훈이", 10]
-    let hhh : (string | number)[]= ["철수","영희","훈이", 10]   
+    let fff : number[] = [1,2,3,4,5,"안녕하세요"] // number만 들어가는 배열  
+    let ggg : string[] = ["철수","영희","훈이", 10] // string만 들어가는 배열 
+    let hhh : (string | number)[]= ["철수","영희","훈이", 10]  // number 또는 string 만 들어가 있는 배열 
 
     // 객체타입
     interface IProfile {
@@ -44,7 +44,7 @@ export default function TypescriptPage(){
     profile.age = "8살"
     profile.hobby = "수영"
 
-    // 함수타입
+    // 함수타입 *** 가장 중요 *** 
     function add(num1: number, num2: number, unit: string): string {
         return num1 + num2 + unit
 
