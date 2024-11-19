@@ -1,6 +1,6 @@
 import {useQuery,gql} from '@apollo/client'
 import { useRouter } from 'next/router'
-import { IQuery, IQueryFetchBoardArgs } from '../../../scr/commons/types/generated/type'
+import { IQuery, IQueryFetchBoardArgs } from '../../../src/commons/types/generated/type'
 
 const FETCH_BOARD = gql`
     query fetchBoard($number:Int){

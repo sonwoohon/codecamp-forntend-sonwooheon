@@ -1,6 +1,6 @@
 import { useMutation, gql } from '@apollo/client'
 import { useState } from 'react'
-import { IMutation, IMutationCreateBoardArgs } from '../../../scr/commons/types/generated/type'
+import { IMutation, IMutationCreateBoardArgs } from '../../../src/commons/types/generated/type'
 
 const 나의그래프큐엘셋팅 = gql`
     mutation createBoard($write : String, $title: String, $contents: String){
